@@ -1,22 +1,78 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+<head>
     <meta charset="utf-8">
-    <title>Hypeautoparts</title>
+    <title>Hypeautoparts - Premium Auto Parts</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: white;
+            text-align: center;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+        h1 { font-size: 2.5em; margin-bottom: 20px; }
+        .phone {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin: 20px 0;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 15px 25px;
+            border-radius: 25px;
+            display: inline-block;
+        }
+    </style>
     <script type="text/javascript">
-      // Single Page Apps for GitHub Pages
-      // https://github.com/rafgraph/spa-github-pages
-      var pathSegmentsToKeep = 0;
-      var l = window.location;
-      l.replace(
-        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
-        l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
-        l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
-        (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
-        l.hash
-      );
+        // Single Page Apps for GitHub Pages
+        // https://github.com/rafgraph/spa-github-pages
+        var pathSegmentsToKeep = 0;
+        var l = window.location;
+        
+        console.log('404.html loaded, current location:', l.href);
+        
+        // Check if this is actually a route that should be handled by the SPA
+        if (l.pathname !== '/') {
+            console.log('Redirecting to SPA router...');
+            l.replace(
+                l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+                l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
+                l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
+                (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+                l.hash
+            );
+        } else {
+            // If we're at root and still getting 404, show fallback content
+            console.log('At root but still 404, showing fallback content');
+            setTimeout(() => {
+                document.body.innerHTML = `
+                    <div class="container">
+                        <h1>🚗 Hypeautoparts</h1>
+                        <p>Premium Auto Parts & Car Accessories</p>
+                        <div class="phone">📞 +1 (855) 518-9685</div>
+                        <p>Loading our main website...</p>
+                        <button onclick="window.location.reload()" style="background: #28a745; color: white; border: none; padding: 15px 30px; font-size: 1.1em; border-radius: 25px; cursor: pointer;">
+                            🔄 Refresh Page
+                        </button>
+                    </div>
+                `;
+            }, 1000);
+        }
     </script>
-  </head>
-  <body>
-  </body>
+</head>
+<body>
+    <div class="container">
+        <h1>🚗 Hypeautoparts</h1>
+        <p>Loading...</p>
+    </div>
+</body>
 </html>
