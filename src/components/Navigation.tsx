@@ -22,10 +22,12 @@ const Navigation = () => {
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <Link to="/" className="flex items-center space-x-2 hover-scale">
-              <div className="w-12 h-12 gradient-accent rounded-lg flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-xl">H</span>
-              </div>
+            <Link to="/" className="flex items-center space-x-3 hover-scale">
+              <img 
+                src="https://static.vecteezy.com/system/resources/previews/043/323/964/non_2x/car-logo-design-concept-art-design-stock-isolated-on-white-background-vector.jpg"
+                alt="Hype Auto Parts Logo"
+                className="w-10 h-10 object-contain bg-yellow-400 rounded-lg p-1"
+              />
               <span className="text-2xl font-bold text-primary">Hype<span className="text-foreground">autoparts</span></span>
             </Link>
 

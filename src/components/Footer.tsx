@@ -45,9 +45,11 @@ const Footer = () => {
           {/* Brand Section */}
           <div className="lg:col-span-2">
             <Link to="/" className="flex items-center space-x-3 mb-6">
-              <div className="w-12 h-12 gradient-accent rounded-lg flex items-center justify-center">
-                <span className="text-primary-foreground font-black text-xl">H</span>
-              </div>
+              <img 
+                src="https://static.vecteezy.com/system/resources/previews/043/323/964/non_2x/car-logo-design-concept-art-design-stock-isolated-on-white-background-vector.jpg"
+                alt="Hype Auto Parts Logo"
+                className="w-12 h-12 object-contain bg-yellow-400 rounded-lg p-2"
+              />
               <span className="text-2xl font-black text-primary">
                 Hype<span className="text-foreground">autoparts</span>
               </span>

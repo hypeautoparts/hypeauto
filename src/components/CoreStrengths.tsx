@@ -186,6 +186,94 @@ const CoreStrengths = () => {
 
 // New Customer Section Component
 const CustomerSection = () => {
+  const [openFAQ, setOpenFAQ] = React.useState<number | null>(0);
+
+  const faqItems = [
+    {
+      question: "Q1. WHAT ARE OEM AUTO PARTS?",
+      answer: "OEM (Original Equipment Manufacturer) parts are components made by the same company that manufactured the original parts for your vehicle. These parts ensure perfect fit, quality, and performance matching your car's specifications."
+    },
+    {
+      question: "Q2. WHY SHOULD I CHOOSE HYPEAUTOPARTS FOR AUTO PARTS?",
+      answer: "HypeAutoParts offers premium quality OEM and aftermarket parts with 24-hour delivery, expert installation guidance, competitive pricing, and exceptional customer service. We're recognized as one of the most trusted auto parts suppliers with 99% customer satisfaction."
+    },
+    {
+      question: "Q3. HOW DO I ENSURE COMPATIBILITY WITH MY VEHICLE?",
+      answer: "Our expert team helps you find the right parts by matching your vehicle's VIN number, year, make, model, and engine specifications. We also provide detailed compatibility charts and technical support to ensure perfect fitment."
+    },
+    {
+      question: "Q4. WHERE ARE YOU LOCATED?",
+      answer: "We serve customers nationwide with multiple distribution centers across major cities. Our headquarters handles online orders with fast shipping, and we have authorized dealers and service centers in key automotive markets."
+    }
+  ];
+
+  const toggleFAQ = (index: number) => {
+    setOpenFAQ(openFAQ === index ? null : index);
+  };
+
+  // Form state
+  const [formData, setFormData] = React.useState({
+    name: '',
+    email: '',
+    phone: '',
+    carBrand: '',
+    carModel: '',
+    partsNeeded: ''
+  });
+
+  const [isSubmitting, setIsSubmitting] = React.useState(false);
+  const [submitMessage, setSubmitMessage] = React.useState('');
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitMessage('');
+
+    // Basic validation
+    if (!formData.name || !formData.email) {
+      setSubmitMessage('Please fill in all required fields.');
+      setIsSubmitting(false);
+      return;
+    }
+
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      setSubmitMessage('Please enter a valid email address.');
+      setIsSubmitting(false);
+      return;
+    }
+
+    try {
+      // Simulate form submission (replace with actual API call)
+      await new Promise(resolve => setTimeout(resolve, 2000));
+      
+      // Reset form
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        carBrand: '',
+        carModel: '',
+        partsNeeded: ''
+      });
+      
+      setSubmitMessage('Thank you! We\'ll get back to you within 24 hours with your quote.');
+    } catch (error) {
+      setSubmitMessage('Sorry, there was an error. Please try again or call us directly.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <section className="py-24 bg-black relative overflow-hidden">
       <div className="container mx-auto px-4">
@@ -199,36 +287,24 @@ const CustomerSection = () => {
             
             {/* FAQ Items */}
             <div className="space-y-4 mb-8">
-              <div className="border border-gray-700 rounded-lg">
-                <button className="w-full text-left p-4 bg-gray-900 hover:bg-gray-800 transition-colors flex justify-between items-center">
-                  <span className="text-yellow-500 font-semibold">Q1. WHAT ARE OEM AUTO PARTS?</span>
-                  <span className="text-white">+</span>
-                </button>
-                <div className="p-4 text-gray-300 text-sm leading-relaxed">
-                  OEM (Original Equipment Manufacturer) parts are components made by the same company that manufactured the original parts for your vehicle. These parts ensure perfect fit, quality, and performance matching your car's specifications.
+              {faqItems.map((faq, index) => (
+                <div key={index} className="border border-gray-700 rounded-lg">
+                  <button 
+                    onClick={() => toggleFAQ(index)}
+                    className="w-full text-left p-4 bg-gray-900 hover:bg-gray-800 transition-colors flex justify-between items-center"
+                  >
+                    <span className="text-yellow-500 font-semibold">{faq.question}</span>
+                    <span className={`text-white transition-transform duration-200 ${openFAQ === index ? 'rotate-45' : ''}`}>
+                      +
+                    </span>
+                  </button>
+                  {openFAQ === index && (
+                    <div className="p-4 text-gray-300 text-sm leading-relaxed border-t border-gray-700">
+                      {faq.answer}
+                    </div>
+                  )}
                 </div>
-              </div>
-
-              <div className="border border-gray-700 rounded-lg">
-                <button className="w-full text-left p-4 bg-gray-900 hover:bg-gray-800 transition-colors flex justify-between items-center">
-                  <span className="text-yellow-500 font-semibold">Q2. WHY SHOULD I CHOOSE HYPEAUTOPARTS FOR AUTO PARTS?</span>
-                  <span className="text-white">+</span>
-                </button>
-              </div>
-
-              <div className="border border-gray-700 rounded-lg">
-                <button className="w-full text-left p-4 bg-gray-900 hover:bg-gray-800 transition-colors flex justify-between items-center">
-                  <span className="text-yellow-500 font-semibold">Q3. HOW DO I ENSURE COMPATIBILITY WITH MY VEHICLE?</span>
-                  <span className="text-white">+</span>
-                </button>
-              </div>
-
-              <div className="border border-gray-700 rounded-lg">
-                <button className="w-full text-left p-4 bg-gray-900 hover:bg-gray-800 transition-colors flex justify-between items-center">
-                  <span className="text-yellow-500 font-semibold">Q4. WHERE ARE YOU LOCATED?</span>
-                  <span className="text-white">+</span>
-                </button>
-              </div>
+              ))}
             </div>
 
             <button className="text-gray-400 hover:text-yellow-500 transition-colors font-medium">
@@ -258,22 +334,40 @@ const CustomerSection = () => {
           <div className="bg-yellow-500 rounded-2xl p-6 md:p-8">
             <h3 className="text-xl md:text-2xl font-bold text-white mb-6 md:mb-8">Get Your Auto Parts</h3>
             
-            <form className="space-y-4 md:space-y-6">
+            {submitMessage && (
+              <div className={`mb-4 p-3 rounded-lg text-sm font-medium ${
+                submitMessage.includes('Thank you') 
+                  ? 'bg-green-100 text-green-800 border border-green-200' 
+                  : 'bg-red-100 text-red-800 border border-red-200'
+              }`}>
+                {submitMessage}
+              </div>
+            )}
+            
+            <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-white font-semibold mb-2">YOUR NAME *</label>
                   <input 
                     type="text" 
+                    name="name"
+                    value={formData.name}
+                    onChange={handleInputChange}
                     placeholder="John Doe"
-                    className="w-full p-3 rounded-lg bg-white border-0 focus:ring-2 focus:ring-black"
+                    required
+                    className="w-full p-3 rounded-lg bg-white border-0 focus:ring-2 focus:ring-black text-black placeholder-gray-500"
                   />
                 </div>
                 <div>
                   <label className="block text-white font-semibold mb-2">EMAIL ADDRESS *</label>
                   <input 
                     type="email" 
+                    name="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
                     placeholder="johndoe@gmail.com"
-                    className="w-full p-3 rounded-lg bg-white border-0 focus:ring-2 focus:ring-black"
+                    required
+                    className="w-full p-3 rounded-lg bg-white border-0 focus:ring-2 focus:ring-black text-black placeholder-gray-500"
                   />
                 </div>
               </div>
@@ -283,8 +377,11 @@ const CustomerSection = () => {
                   <label className="block text-white font-semibold mb-2">PHONE NO</label>
                   <input 
                     type="tel" 
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleInputChange}
                     placeholder="+1 (888) 234-9140"
-                    className="w-full p-3 rounded-lg bg-white border-0 focus:ring-2 focus:ring-black"
+                    className="w-full p-3 rounded-lg bg-white border-0 focus:ring-2 focus:ring-black text-black placeholder-gray-500"
                   />
                 </div>
               </div>
@@ -294,16 +391,22 @@ const CustomerSection = () => {
                   <label className="block text-white font-semibold mb-2">CAR BRAND</label>
                   <input 
                     type="text" 
+                    name="carBrand"
+                    value={formData.carBrand}
+                    onChange={handleInputChange}
                     placeholder="Toyota"
-                    className="w-full p-3 rounded-lg bg-white border-0 focus:ring-2 focus:ring-black"
+                    className="w-full p-3 rounded-lg bg-white border-0 focus:ring-2 focus:ring-black text-black placeholder-gray-500"
                   />
                 </div>
                 <div>
                   <label className="block text-white font-semibold mb-2">CAR MODEL</label>
                   <input 
                     type="text" 
+                    name="carModel"
+                    value={formData.carModel}
+                    onChange={handleInputChange}
                     placeholder="Camry 2020"
-                    className="w-full p-3 rounded-lg bg-white border-0 focus:ring-2 focus:ring-black"
+                    className="w-full p-3 rounded-lg bg-white border-0 focus:ring-2 focus:ring-black text-black placeholder-gray-500"
                   />
                 </div>
               </div>
@@ -311,16 +414,24 @@ const CustomerSection = () => {
               <div>
                 <label className="block text-white font-semibold mb-2">PARTS NEEDED</label>
                 <textarea 
+                  name="partsNeeded"
+                  value={formData.partsNeeded}
+                  onChange={handleInputChange}
                   placeholder="Describe the auto parts you need..."
-                  className="w-full p-3 rounded-lg bg-white border-0 focus:ring-2 focus:ring-black h-24 resize-none"
-                ></textarea>
+                  className="w-full p-3 rounded-lg bg-white border-0 focus:ring-2 focus:ring-black h-24 resize-none text-black placeholder-gray-500"
+                />
               </div>
 
               <button 
                 type="submit"
-                className="w-full bg-black text-white font-bold py-4 rounded-lg hover:bg-gray-800 transition-colors"
+                disabled={isSubmitting}
+                className={`w-full font-bold py-4 rounded-lg transition-colors ${
+                  isSubmitting 
+                    ? 'bg-gray-600 text-gray-300 cursor-not-allowed' 
+                    : 'bg-black text-white hover:bg-gray-800'
+                }`}
               >
-                GET QUOTE
+                {isSubmitting ? 'SENDING...' : 'GET QUOTE'}
               </button>
             </form>
           </div>

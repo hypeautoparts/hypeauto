@@ -59,7 +59,7 @@ const Shop = () => {
       <Navigation />
       <main>
         {/* Hero Section */}
-        <section className="py-12 md:py-16 bg-background">
+        <section className="pt-8 md:pt-12 pb-0 bg-background">
           <div className="container mx-auto px-4">
             <div className="text-center animate-slide-up">
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-black mb-4 md:mb-6">
@@ -75,7 +75,7 @@ const Shop = () => {
         </section>
 
         {/* Filters & Search */}
-        <section className="py-6 md:py-8 bg-card/30 sticky top-20 z-40">
+        <section className="py-4 md:py-6 bg-card/50 sticky top-20 z-40 backdrop-blur-md border-b border-border/20 shadow-sm">
           <div className="container mx-auto px-4">
             <div className="flex flex-col md:flex-row gap-4 md:gap-6 items-center justify-between">
               {/* Search */}

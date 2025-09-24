@@ -1,73 +1,55 @@
-# Welcome to your Lovable project
+# Hype Auto Parts Website
 
-## Project info
+## Project Overview
 
-**URL**: https://lovable.dev/projects/0f90694f-7474-4f77-8e11-272c97fd9f8a
+A modern, responsive auto parts e-commerce website built with React and TypeScript. Features a comprehensive catalog of automotive parts, brand showcases, and user-friendly navigation.
 
-## How can I edit this code?
+**Website**: https://hypeautoparts.com
 
-There are several ways of editing your application.
+## Development Setup
 
-**Use Lovable**
+### Prerequisites
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/0f90694f-7474-4f77-8e11-272c97fd9f8a) and start prompting.
+- Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+### Getting Started
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+# Step 1: Clone the repository
+git clone https://github.com/hypeautoparts/hypeauto.git
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Step 2: Navigate to the project directory
+cd hypeauto
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Step 3: Install dependencies
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Step 4: Start the development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+### Available Scripts
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+- `npm run deploy` - Deploy to GitHub Pages
 
-**Use GitHub Codespaces**
+## Technology Stack
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+This project is built with modern web technologies:
 
-## What technologies are used for this project?
+- **Vite** - Fast build tool and development server
+- **TypeScript** - Type-safe JavaScript
+- **React** - UI component library
+- **shadcn/ui** - Modern component system
+- **Tailwind CSS** - Utility-first CSS framework
+- **Lucide React** - Beautiful icons
 
-This project is built with:
+## Deployment
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+The website is automatically deployed to GitHub Pages using GitHub Actions. Every push to the master branch triggers a new deployment.
 
-## How can I deploy this project?
+### Custom Domain Setup
 
-Simply open [Lovable](https://lovable.dev/projects/0f90694f-7474-4f77-8e11-272c97fd9f8a) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+The site is configured to use the custom domain `hypeautoparts.com` through GitHub Pages settings.
