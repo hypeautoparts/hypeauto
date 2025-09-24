@@ -47,11 +47,11 @@ const Homepage = () => {
         
         {/* Quick Stats */}
         <section className="py-16 bg-background relative overflow-hidden">
-          {/* Background Animation Elements */}
+          {/* Background Animation Elements - Simplified */}
           <div className="absolute inset-0 opacity-5">
-            <div className="absolute top-10 left-10 w-20 h-20 bg-primary rounded-full animate-pulse"></div>
-            <div className="absolute top-32 right-20 w-16 h-16 bg-accent rounded-full animate-bounce" style={{ animationDelay: '1s' }}></div>
-            <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-primary rounded-full animate-ping" style={{ animationDelay: '2s' }}></div>
+            <div className="absolute top-10 left-10 w-20 h-20 bg-primary rounded-full"></div>
+            <div className="absolute top-32 right-20 w-16 h-16 bg-accent rounded-full"></div>
+            <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-primary rounded-full"></div>
           </div>
           
           <div className="container mx-auto px-4 relative z-10">
@@ -88,12 +88,12 @@ const Homepage = () => {
 
         {/* Service Highlights */}
         <section className="py-24 bg-card/30 relative overflow-hidden">
-          {/* Animated Background Pattern */}
+          {/* Animated Background Pattern - Simplified */}
           <div className="absolute inset-0 opacity-5">
             <div className="absolute top-0 left-0 w-full h-full">
-              <div className="absolute top-1/4 left-1/4 w-32 h-32 border border-primary rounded-full animate-spin-slow"></div>
-              <div className="absolute top-3/4 right-1/4 w-24 h-24 border border-accent rounded-full animate-spin-reverse"></div>
-              <div className="absolute top-1/2 left-1/2 w-16 h-16 bg-primary/30 rounded-full animate-pulse"></div>
+              <div className="absolute top-1/4 left-1/4 w-32 h-32 border border-primary rounded-full"></div>
+              <div className="absolute top-3/4 right-1/4 w-24 h-24 border border-accent rounded-full"></div>
+              <div className="absolute top-1/2 left-1/2 w-16 h-16 bg-primary/30 rounded-full"></div>
             </div>
           </div>
 
@@ -101,12 +101,12 @@ const Homepage = () => {
             <div className="text-center mb-16 animate-slide-up">
               <div className="inline-block">
                 <h2 className="text-3xl md:text-4xl font-black mb-6 relative">
-                  <span className="text-foreground animate-fade-in-up">Why Professionals</span>
-                  <span className="text-primary animate-fade-in-up" style={{ animationDelay: '0.2s' }}> Choose Us</span>
-                  <div className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-primary to-accent transform scale-x-0 animate-scale-x" style={{ animationDelay: '0.5s' }}></div>
+                  <span className="text-foreground">Why Professionals</span>
+                  <span className="text-primary"> Choose Us</span>
+                  <div className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-primary to-accent"></div>
                 </h2>
               </div>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
                 Industry-leading services that set us apart in the automotive parts market.
               </p>
             </div>
@@ -189,19 +189,19 @@ const Homepage = () => {
 
         {/* Industry Solutions */}
         <section className="py-24 bg-background relative">
-          {/* Floating Elements */}
+          {/* Floating Elements - Simplified */}
           <div className="absolute inset-0 overflow-hidden opacity-10">
-            <div className="absolute top-20 left-10 w-4 h-4 bg-primary rounded-full animate-bounce" style={{ animationDelay: '0s' }}></div>
-            <div className="absolute top-40 right-20 w-6 h-6 bg-accent rounded-full animate-bounce" style={{ animationDelay: '1s' }}></div>
-            <div className="absolute bottom-32 left-1/3 w-8 h-8 bg-primary rounded-full animate-bounce" style={{ animationDelay: '2s' }}></div>
-            <div className="absolute bottom-20 right-1/4 w-5 h-5 bg-accent rounded-full animate-bounce" style={{ animationDelay: '3s' }}></div>
+            <div className="absolute top-20 left-10 w-4 h-4 bg-primary rounded-full"></div>
+            <div className="absolute top-40 right-20 w-6 h-6 bg-accent rounded-full"></div>
+            <div className="absolute bottom-32 left-1/3 w-8 h-8 bg-primary rounded-full"></div>
+            <div className="absolute bottom-20 right-1/4 w-5 h-5 bg-accent rounded-full"></div>
           </div>
 
           <div className="container mx-auto px-4 relative z-10">
             <div className="text-center mb-16 animate-slide-up">
               <h2 className="text-3xl md:text-4xl font-black mb-6 relative">
                 <span className="text-foreground">Industry</span>
-                <span className="text-primary animate-pulse"> Solutions</span>
+                <span className="text-primary"> Solutions</span>
               </h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
                 Specialized services tailored for different segments of the automotive industry.
@@ -273,14 +273,14 @@ const Homepage = () => {
 
         {/* Quick Tools */}
         <section className="py-24 bg-card/30 relative overflow-hidden">
-          {/* Dynamic Background Elements */}
+          {/* Dynamic Background Elements - Simplified */}
           <div className="absolute inset-0">
             <div className="absolute top-0 left-0 w-full h-full opacity-5">
-              <div className="absolute top-1/4 left-1/6 w-24 h-24 border-2 border-primary rounded-full animate-spin-slow"></div>
-              <div className="absolute bottom-1/4 right-1/6 w-32 h-32 border border-accent rounded-full animate-spin-reverse"></div>
+              <div className="absolute top-1/4 left-1/6 w-24 h-24 border-2 border-primary rounded-full"></div>
+              <div className="absolute bottom-1/4 right-1/6 w-32 h-32 border border-accent rounded-full"></div>
               <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                <div className="w-40 h-40 border border-primary/30 rounded-full animate-pulse"></div>
-                <div className="absolute inset-8 border border-accent/30 rounded-full animate-ping"></div>
+                <div className="w-40 h-40 border border-primary/30 rounded-full"></div>
+                <div className="absolute inset-8 border border-accent/30 rounded-full"></div>
               </div>
             </div>
           </div>
@@ -289,10 +289,10 @@ const Homepage = () => {
             <div className="text-center mb-16 animate-slide-up">
               <h2 className="text-3xl md:text-4xl font-black mb-6 relative inline-block">
                 <span className="text-foreground">Quick</span>
-                <span className="text-primary animate-bounce"> Tools</span>
+                <span className="text-primary"> Tools</span>
                 <div className="absolute -inset-2 bg-gradient-to-r from-primary/20 to-accent/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
               </h2>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
                 Helpful tools to make your auto parts shopping experience easier and more efficient.
               </p>
             </div>
@@ -377,12 +377,12 @@ const Homepage = () => {
 
         {/* Quick Contact Strip */}
         <section className="py-16 bg-primary relative overflow-hidden">
-          {/* Animated Background Elements */}
+          {/* Animated Background Elements - Simplified */}
           <div className="absolute inset-0 opacity-10">
-            <div className="absolute top-8 left-8 w-12 h-12 bg-white rounded-full animate-pulse"></div>
-            <div className="absolute top-8 right-8 w-8 h-8 bg-white rounded-full animate-bounce" style={{ animationDelay: '1s' }}></div>
-            <div className="absolute bottom-8 left-1/4 w-16 h-16 border-2 border-white rounded-full animate-spin-slow"></div>
-            <div className="absolute bottom-8 right-1/4 w-6 h-6 bg-white rounded-full animate-ping" style={{ animationDelay: '2s' }}></div>
+            <div className="absolute top-8 left-8 w-12 h-12 bg-white rounded-full"></div>
+            <div className="absolute top-8 right-8 w-8 h-8 bg-white rounded-full"></div>
+            <div className="absolute bottom-8 left-1/4 w-16 h-16 border-2 border-white rounded-full"></div>
+            <div className="absolute bottom-8 right-1/4 w-6 h-6 bg-white rounded-full"></div>
           </div>
 
           <div className="container mx-auto px-4 relative z-10">
