@@ -109,7 +109,7 @@ const CoreStrengths = () => {
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">Reliability</h3>
                 <p className="text-gray-300 text-sm leading-relaxed">
-                  We are the Most Reliable Auto Parts Company in the Indian Market.
+                  We are the Most Reliable Auto Parts Company in the US Market.
                 </p>
               </div>
             </div>

@@ -35,7 +35,7 @@ const Homepage = () => {
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
                 With over a decade of experience in the automotive industry, Hypeautoparts has become 
-                the trusted name for premium auto parts across India. We specialize in providing 
+                the trusted name for premium auto parts across the United States. We specialize in providing 
                 high-quality interior, exterior, and body parts for all major vehicle brands, 
                 ensuring every customer receives authentic, reliable components backed by expert support.
               </p>
@@ -124,7 +124,7 @@ const Homepage = () => {
                 {
                   icon: Clock,
                   title: 'Same-Day Dispatch',
-                  description: 'Orders placed before 2 PM are dispatched the same day across India.',
+                  description: 'Orders placed before 2 PM are dispatched the same day across the United States.',
                   color: 'text-green-500',
                   bgColor: 'bg-green-500/10',
                   glowColor: 'hover:shadow-green-500/25'
