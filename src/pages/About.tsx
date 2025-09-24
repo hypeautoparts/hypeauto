@@ -524,8 +524,8 @@ const About = () => {
                   </div>
                   <h3 className="text-xl font-black mb-4 text-foreground">Call Us</h3>
                   <p className="text-muted-foreground mb-4">Speak with our parts specialists</p>
-                  <a href="tel:+18882349140" className="text-primary font-semibold hover:underline text-lg">
-                    +1 (888) 234-9140
+                  <a href="tel:+18555189685" className="text-primary font-semibold hover:underline text-lg">
+                    +1 (855) 518-9685
                   </a>
                   <p className="text-sm text-muted-foreground mt-2">24/7 Support Available</p>
                 </CardContent>

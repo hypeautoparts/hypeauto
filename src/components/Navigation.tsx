@@ -50,7 +50,7 @@ const Navigation = () => {
             <div className="hidden lg:flex items-center space-x-4">
               <div className="flex items-center space-x-2 text-sm">
                 <Phone className="w-4 h-4 text-primary" />
-                <a href="tel:+18882349140" className="text-muted-foreground hover:text-primary transition-colors">+1 (888) 234-9140</a>
+                <a href="tel:+18555189685" className="text-muted-foreground hover:text-primary transition-colors">+1 (855) 518-9685</a>
               </div>
               <Link to="/contact">
                 <Button variant="default" size="sm" className="hover-glow">

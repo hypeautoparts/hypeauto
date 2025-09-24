@@ -59,10 +59,10 @@ const CTASection = () => {
             <h3 className="text-xl font-black mb-2 text-foreground">Call Us Now</h3>
             <p className="text-muted-foreground mb-3">Speak with our parts experts</p>
             <a 
-              href="tel:+18882349140" 
-              className="text-primary font-semibold hover:underline text-lg"
+              href="tel:+18555189685" 
+              className="inline-flex items-center px-8 py-4 bg-white text-primary rounded-xl font-black text-lg hover:bg-gray-100 transition-colors group hover:shadow-2xl border-2 border-white/20"
             >
-              +1 (888) 234-9140
+              +1 (855) 518-9685
             </a>
           </div>
 
