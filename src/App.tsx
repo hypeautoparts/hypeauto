@@ -14,27 +14,36 @@ import RefundPolicy from "./pages/RefundPolicy";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
 import Preloader from "./components/Preloader";
+import ErrorBoundary from "./components/ErrorBoundary";
 
 const queryClient = new QueryClient();
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(false); // Temporarily disable preloader
+  
+  // Add debugging
+  useEffect(() => {
+    console.log('App component mounted');
+    console.log('Current location:', window.location.href);
+  }, []);
 
   const handleLoadingComplete = () => {
+    console.log('Loading completed');
     setIsLoading(false);
   };
 
   return (
-    <QueryClientProvider client={queryClient}>
-      <TooltipProvider>
-        <Toaster />
-        <Sonner />
-        {isLoading ? (
-          <Preloader onLoadingComplete={handleLoadingComplete} />
-        ) : (
-          <BrowserRouter>
-            <ScrollToTop />
-            <Routes>
+    <ErrorBoundary>
+      <QueryClientProvider client={queryClient}>
+        <TooltipProvider>
+          <Toaster />
+          <Sonner />
+          {isLoading ? (
+            <Preloader onLoadingComplete={handleLoadingComplete} />
+          ) : (
+            <BrowserRouter>
+              <ScrollToTop />
+              <Routes>
               <Route path="/" element={<Homepage />} />
               <Route path="/about" element={<About />} />
               <Route path="/shop" element={<Shop />} />
@@ -49,6 +58,7 @@ const App = () => {
         )}
       </TooltipProvider>
     </QueryClientProvider>
+    </ErrorBoundary>
   );
 };
 
