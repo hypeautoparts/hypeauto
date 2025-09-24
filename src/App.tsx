@@ -18,7 +18,7 @@ import Preloader from "./components/Preloader";
 const queryClient = new QueryClient();
 
 const App = () => {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false); // Temporarily disable preloader
 
   const handleLoadingComplete = () => {
     setIsLoading(false);
