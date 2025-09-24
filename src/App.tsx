@@ -19,7 +19,7 @@ import ErrorBoundary from "./components/ErrorBoundary";
 const queryClient = new QueryClient();
 
 const App = () => {
-  const [isLoading, setIsLoading] = useState(false); // Temporarily disable preloader
+  const [isLoading, setIsLoading] = useState(true); // Re-enable preloader
   
   // Add debugging
   useEffect(() => {
