@@ -197,10 +197,10 @@ const RefundPolicy = () => {
                   Email Returns Team
                 </a>
                 <a 
-                  href="tel:+18555189685"
+                  href="tel:+18889290045"
                   className="px-6 py-3 border border-primary text-primary rounded-lg font-semibold hover:bg-primary hover:text-primary-foreground transition-all"
                 >
-                  Call: +1 (855) 518-9685
+                  Call: +1 (888) 929-0045
                 </a>
               </div>
             </CardContent>

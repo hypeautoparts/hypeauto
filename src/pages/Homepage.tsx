@@ -481,8 +481,8 @@ const Homepage = () => {
                   <div className="absolute inset-0 w-8 h-8 mx-auto border-2 border-primary-foreground rounded-full opacity-0 group-hover:opacity-100 group-hover:scale-150 transition-all duration-500"></div>
                 </div>
                 <h3 className="text-lg font-black text-primary-foreground mb-2 group-hover:scale-105 transition-transform duration-200">Call Us Now</h3>
-                <a href="tel:+18555189685" className="text-primary-foreground/90 hover:text-primary-foreground transition-colors text-lg font-semibold group-hover:animate-pulse">
-                  +1 (855) 518-9685
+                <a href="tel:+18889290045" className="text-primary-foreground/90 hover:text-primary-foreground transition-colors text-lg font-semibold group-hover:animate-pulse">
+                  +1 (888) 929-0045
                 </a>
               </div>
               <div className="animate-slide-up group cursor-pointer" style={{ animationDelay: '0.1s' }}>

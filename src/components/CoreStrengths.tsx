@@ -380,7 +380,7 @@ const CustomerSection = () => {
                     name="phone"
                     value={formData.phone}
                     onChange={handleInputChange}
-                    placeholder="+1 (855) 518-9685"
+                    placeholder="+1 (888) 929-0045"
                     className="w-full p-3 rounded-lg bg-white border-0 focus:ring-2 focus:ring-black text-black placeholder-gray-500"
                   />
                 </div>

@@ -33,9 +33,9 @@ const Contact = () => {
     {
       icon: Phone,
       title: 'Phone Support',
-      detail: '+1 (855) 518-9685',
+      detail: '+1 (888) 929-0045',
       description: 'Mon-Sat 9AM to 8PM',
-      action: 'tel:+18555189685'
+      action: 'tel:+18889290045'
     },
     {
       icon: Mail,
@@ -291,7 +291,7 @@ const Contact = () => {
                       For urgent part requirements or technical emergencies
                     </p>
                     <Button asChild className="hover-glow">
-                      <a href="tel:+18555189685">Call Now: +1 (855) 518-9685</a>
+                      <a href="tel:+18889290045">Call Now: +1 (888) 929-0045</a>
                     </Button>
                   </CardContent>
                 </Card>
