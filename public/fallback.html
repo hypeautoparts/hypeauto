@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hypeautoparts - Premium Auto Parts</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        p {
+            font-size: 1.2em;
+            margin: 15px 0;
+            opacity: 0.9;
+        }
+        .phone {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin: 20px 0;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 15px 25px;
+            border-radius: 25px;
+            display: inline-block;
+        }
+        .refresh-btn {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.1em;
+            border-radius: 25px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background 0.3s;
+        }
+        .refresh-btn:hover {
+            background: #218838;
+        }
+        .features {
+            margin-top: 30px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            text-align: left;
+        }
+        .feature {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚗 Hypeautoparts</h1>
+        <p>Premium Auto Parts & Car Accessories</p>
+        <p>Your trusted source for quality interior, exterior, and body parts</p>
+        
+        <div class="phone">
+            📞 +1 (855) 518-9685
+        </div>
+        
+        <div class="features">
+            <div class="feature">
+                <h3>🛡️ Authenticity Guaranteed</h3>
+                <p>100% genuine OEM and aftermarket parts</p>
+            </div>
+            <div class="feature">
+                <h3>🚚 Same-Day Dispatch</h3>
+                <p>Orders before 2 PM dispatched same day</p>
+            </div>
+            <div class="feature">
+                <h3>🎧 Expert Support</h3>
+                <p>Technical guidance from specialists</p>
+            </div>
+            <div class="feature">
+                <h3>🔧 Installation Help</h3>
+                <p>Step-by-step guides and mechanic network</p>
+            </div>
+        </div>
+        
+        <button class="refresh-btn" onclick="window.location.reload()">
+            🔄 Refresh Page
+        </button>
+        
+        <p style="margin-top: 30px; opacity: 0.7;">
+            If you continue to see this page, please contact us directly
+        </p>
+    </div>
+
+    <script>
+        console.log('Fallback page loaded');
+        
+        // Try to redirect to the main app after a short delay
+        setTimeout(() => {
+            if (window.location.pathname === '/fallback.html') {
+                console.log('Attempting to redirect to main app');
+                window.location.href = '/';
+            }
+        }, 3000);
+    </script>
+</body>
+</html>

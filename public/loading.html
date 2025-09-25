@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hypeautoparts - Loading...</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+        .loading-container {
+            max-width: 500px;
+            padding: 40px;
+        }
+        .logo {
+            font-size: 3rem;
+            font-weight: 900;
+            color: #fbbf24;
+            margin-bottom: 1rem;
+        }
+        .loading-text {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: #e5e5e5;
+        }
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid #333;
+            border-top: 4px solid #fbbf24;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .retry-btn {
+            margin-top: 2rem;
+            padding: 12px 24px;
+            background: #fbbf24;
+            color: #000;
+            border: none;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        .retry-btn:hover {
+            background: #f59e0b;
+        }
+    </style>
+</head>
+<body>
+    <div class="loading-container">
+        <div class="logo">HYPE AUTO PARTS</div>
+        <div class="loading-text">Loading Premium Auto Parts Experience...</div>
+        <div class="spinner"></div>
+        <button class="retry-btn" onclick="window.location.reload()">Refresh Page</button>
+        <script>
+            // Auto-redirect to main site after 3 seconds if this fallback is shown
+            setTimeout(function() {
+                window.location.reload();
+            }, 3000);
+        </script>
+    </div>
+</body>
+</html>
